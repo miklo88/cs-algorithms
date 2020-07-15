@@ -2,6 +2,19 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+'''
+UPER NOTES
+so you're given an array.
+for every index in that array you must use a certain 
+multiplication pattern to return that indexs value 
+so you have to do some super tricky math here. 
+example array of [1,7,3,4] 
+you would multiply each value in this array like so
+[7*3*4,1*3*4,1*7*4,1*7*3] so the pattern is obv when you see it
+"how am i going to get this done."
+a lot of googling
+
+'''
 def product_of_all_other_numbers(arr):
     # Your code here
 
