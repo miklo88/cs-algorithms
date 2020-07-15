@@ -12,13 +12,24 @@ order of non zero ints does not matter.
 "how will i do it"
 you have to loop throught the array to read the values no?
 if any values aren't zero they must shift to the left.
-
-
+non zeros to the left, zeros to the right.
+how am i going to manipulate this array?
+shift? rotate? how do i move an ele to the front of an array?
+if there are no zeros then do nothing with the array.
 '''
 def moving_zeroes(arr):
     # Your code here
-
-    pass
+    
+    for i in range(0, len(arr)):
+        # zeros = []
+        if arr[i] == 0:
+            arr.remove(arr[i])
+            arr.append(0)
+            # print(f'zeros is this',zeros)
+        # else:
+        #     pass
+    return arr
+    # pass
 
 
 if __name__ == '__main__':

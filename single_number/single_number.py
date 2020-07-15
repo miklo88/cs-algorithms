@@ -26,7 +26,7 @@ and you get the difference which equals the one element that doesnt have a doubl
 DOES NOT WORK FOR MULTIPLE ELEMENTS WITH ONLY ONE INT. it returns the sum of both nums of the single ints.
 
 '''
-# dbl = []
+
 def single_number(arr):
     # Your code here
     return 2 * sum(set(arr)) - sum(arr)
