@@ -18,19 +18,17 @@ so either a for or while loop -
 then check each value if it meets certain conditions.
 if elif else. most likely if and else will be needed.
 
+sorting can be applied here. iteration sort or binary search tree would work aqui.
+bubble sort as well.
+
+
 '''
 def single_number(arr):
     # Your code here
-    # for i in arr:
-    #     if arr[i:] != arr[:i]:
-    #         print(arr[0])
-    #         pass 
-            
-    #     else:
-    #         pass 
-    #         #  one num != next num 
-    #     return arr[0]
-    pass
+    n = len(arr)
+    for i in range(0, n):
+        print(n[1])
+    # pass
 
 
 if __name__ == '__main__':
