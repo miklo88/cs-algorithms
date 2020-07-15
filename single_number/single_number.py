@@ -21,10 +21,15 @@ if elif else. most likely if and else will be needed.
 '''
 def single_number(arr):
     # Your code here
-
-
-
-
+    # for i in arr:
+    #     if arr[i:] != arr[:i]:
+    #         print(arr[0])
+    #         pass 
+            
+    #     else:
+    #         pass 
+    #         #  one num != next num 
+    #     return arr[0]
     pass
 
 
