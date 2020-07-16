@@ -35,23 +35,31 @@ so while you are on a specific arr[index] you multiply everything BUT itself.
 4 1*2*3*5 = 30
 5 1*2*3*4 = 24
 now how do i multiply everything up.
+if on the current index. check left and right.
+if numbers on left of current index, multiply them, if not check right
+if nums on right multiply them and combine, multiply with left side if any.
+then add that sum to a list and repeat for the next index
 '''
 
 def product_of_all_other_numbers(arr):
 #     # Your code here
-    # current = arr[0]
-    for i in range(1, len(arr) + 1):
-        cur_index = i
-        index_tot = cur_index
-        print(i)
-        for j in arr:
-            if cur_index[0] * cur_index[0:] and cur_index[:0]: 
-            # print(f' second {j}')
-                return cur_index[0]
-            
-        # if arr[i]:
-        #     print(arr[3])
-        # print(arr)
+    #for loopin the left
+    results = []
+    #left side of the array
+    for i in range(0, len(arr)):
+        print(arr[i])
+        #right side of the array
+        for j in range(0, len(arr)):
+            current = arr[i] == arr[j] 
+            if current:
+                results = arr[0] * arr[-1]
+                # results.append(current)
+                print(results)
+            print(f'second arr {arr[j]}')
+    
+ #this is the for loop where i mult both sides of array together
+    # for k in range(arr):
+    #     print(arr[k])
 #     pass
 
 
@@ -59,5 +67,5 @@ if __name__ == '__main__':
 #     # Use the main function to test your implementation
     arr = [1, 2, 3, 4, 5]
     # arr = [2, 6, 9, 8, 2, 2, 9, 10, 7, 4, 7, 1, 9, 5, 9, 1, 8, 1, 8, 6, 2, 6, 4, 8, 9, 5, 4, 9, 10, 3, 9, 1, 9, 2, 6, 8, 5, 5, 4, 7, 7, 5, 8, 1, 6, 5, 1, 7, 7, 8]
-
+    
     print(f"Output of product_of_all_other_numbers: {product_of_all_other_numbers(arr)}")
