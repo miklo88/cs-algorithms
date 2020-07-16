@@ -42,25 +42,33 @@ then add that sum to a list and repeat for the next index
 '''
 
 def product_of_all_other_numbers(arr):
-#     # Your code here
-    #for loopin the left
-    results = []
-    #left side of the array
-    for i in range(0, len(arr)):
-        print(arr[i])
-        #right side of the array
-        for j in range(0, len(arr)):
-            current = arr[i] == arr[j] 
-            if current:
-                results = arr[0] * arr[-1]
-                # results.append(current)
-                print(results)
-            print(f'second arr {arr[j]}')
+#   # Your code here
+    #results of mult
+    # results = 1
+    #items in left
+    left = []
+    # items in right
+    right = []
     
+    for i in range(0, len(arr)):
+        current = i
+        print(current)
+        
+        for j in range(current - 1, len(arr)):
+            if current == j:
+                left = arr[:j]
+        # return left * j
+        results = results*left
+        print(left)
+        print(results)
+        
+    # for k in range(current + 1, len(arr)):
+    #     if current == k:
+    #         right = arr[k:]
+    #     print(right)
+            
+            # print(f'second arr {arr[j]}')
  #this is the for loop where i mult both sides of array together
-    # for k in range(arr):
-    #     print(arr[k])
-#     pass
 
 
 if __name__ == '__main__':
