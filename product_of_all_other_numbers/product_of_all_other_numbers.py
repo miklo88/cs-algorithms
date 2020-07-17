@@ -40,36 +40,40 @@ if numbers on left of current index, multiply them, if not check right
 if nums on right multiply them and combine, multiply with left side if any.
 then add that sum to a list and repeat for the next index
 '''
-
+    # for i in range(0, len(arr)):
+    #     # zeros = []
+    #     if arr[i] == 0:
+    #         arr.remove(arr[i])
+    #         arr.append(0)
 def product_of_all_other_numbers(arr):
 #   # Your code here
     #results of mult
-    # results = 1
-    #items in left
-    left = []
-    # items in right
-    right = []
-    
-    for i in range(0, len(arr)):
+    n = len(arr)
+    items = []
+    temp = []
+    results = 1
+    # locate the variable. relocate it to the front of the list.
+    for i in range(n):
         current = i
-        print(current)
-        
-        for j in range(current - 1, len(arr)):
-            if current == j:
-                left = arr[:j]
-        # return left * j
-        results = results*left
-        print(left)
-        print(results)
-        
-    # for k in range(current + 1, len(arr)):
-    #     if current == k:
-    #         right = arr[k:]
-    #     print(right)
-            
-            # print(f'second arr {arr[j]}')
- #this is the for loop where i mult both sides of array together
+        print(f'current index {current}')
+        for j in range(n):
+            if current != arr[j]:
+                results = results * arr[j]
+                print(results)
+            elif current == arr[j]:
+                print('equals')
+                
+                # arr.remove(arr[j])
+                # temp = arr.remove(current)
 
+                # items.append(current)
+        print(arr)
+
+    # arr.append(arr[0])
+    # arr.remove(arr[0])
+    # results.append(arr[0])
+    # print('result of array',arr)
+    # print('results',results)
 
 if __name__ == '__main__':
 #     # Use the main function to test your implementation
